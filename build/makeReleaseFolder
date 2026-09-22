@@ -236,8 +236,7 @@ if [ "$PLATFORM" = "2" ] ; then
     done
 
     # This is only an ad-hoc signature, so anyone downloading the release still has to clear
-    # the quarantine flag:
-    #     xattr -dr com.apple.quarantine 2HOL_<version>.app
+    # the quarantine flag (see MacFirstLaunch.txt):
     codesign --force --deep --sign - $BUNDLE
 
 fi
